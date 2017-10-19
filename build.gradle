@@ -16,7 +16,6 @@ sourceSets {
 }
 dependencies {
     compile group: 'org.testng', name: 'testng', version: '6.8.8'
-    compile group: 'com.experitest', name: 'seetest-appium', version: '10.8'
 }
 
 test{
