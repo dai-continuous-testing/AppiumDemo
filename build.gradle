@@ -9,15 +9,11 @@ repositories {
     mavenCentral()
 }
 
-sourceSets {
-    main {
-        runtimeClasspath = files(output.resourcesDir) + runtimeClasspath
-    }
-}
 dependencies {
     compile group: 'org.testng', name: 'testng', version: '6.8.8'
 }
 
 test{
     useTestNG()
+    options.suites("testng.xml")
 }

@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Appium-Webinar" parallel="tests" thread-count="3">
+<suite name="AppiumDemo" parallel="classes" thread-count="2">
 
-    <test name="Eribank Login and Pay">
+    <test name="SimpleTest1">
         <parameter name="deviceQuery" value="@os='ios'"/>
         <classes>
-            <class name="EribankLogin" />
+            <class name="com.experitest.SimpleTest2" />
         </classes>
     </test>
 
-    <test name="Enable Location Services in Apps">
+    <test name="SimpleTest2">
         <parameter name="deviceQuery" value="@os='ios'"/>
         <classes>
-            <class name="EnableLocationServices" />
-        </classes>
-    </test>
-
-    <test name="From Gmail to Safari">
-        <parameter name="deviceQuery" value="@os='ios'"/>
-        <classes>
-            <class name="FromGmailToSafari" />
+            <class name="com.experitest.SimpleTests" />
         </classes>
     </test>
 
