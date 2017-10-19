@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Appium-Webinar" parallel="tests" thread-count="3">
+
+    <test name="Eribank Login and Pay">
+        <parameter name="deviceQuery" value="@os='ios'"/>
+        <classes>
+            <class name="EribankLogin" />
+        </classes>
+    </test>
+
+    <test name="Enable Location Services in Apps">
+        <parameter name="deviceQuery" value="@os='ios'"/>
+        <classes>
+            <class name="EnableLocationServices" />
+        </classes>
+    </test>
+
+    <test name="From Gmail to Safari">
+        <parameter name="deviceQuery" value="@os='ios'"/>
+        <classes>
+            <class name="FromGmailToSafari" />
+        </classes>
+    </test>
+
+</suite>

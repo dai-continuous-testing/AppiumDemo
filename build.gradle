@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+
+repositories {
+    maven {
+        url "http://repo.experitest.com:8010/Maven2/"
+    }
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        runtimeClasspath = files(output.resourcesDir) + runtimeClasspath
+    }
+}
+dependencies {
+    compile group: 'org.testng', name: 'testng', version: '6.8.8'
+    compile group: 'com.experitest', name: 'seetest-appium', version: '10.8'
+}
+
+test{
+    useTestNG()
+}
