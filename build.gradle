@@ -1,6 +1,16 @@
+// download plugins for Gradle uses
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+}
+
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'application'
 
 repositories {
     maven {
@@ -13,11 +23,18 @@ dependencies {
     compile group: 'org.testng', name: 'testng', version: '6.8.8'
 }
 
+mainClassName = "com.experitest.SimpleApp"
+
 task wrapper(type: Wrapper) {
     gradleVersion = '3.4.1'
 }
 
 test{
-    useTestNG()
-    options.suites("testng.xml")
+    useTestNG() {
+        //set TestNG output dir
+        outputDirectory = file("testngOutput")
+        reports.html.enabled = false
+        useDefaultListeners = true
+        suites 'testng.xml'
+    }
 }
