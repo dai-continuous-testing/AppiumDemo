@@ -62,7 +62,9 @@ public class IosDemo {
         String testName = method.getName();
         System.out.println("Test Name: " + testName);
         dc.setCapability("testName", testName);
-        driver = new IOSDriver<IOSElement>(new URL(cloudAddress+"/wd/hub"), dc);
+        //driver = new IOSDriver<IOSElement>(new URL(cloudAddress+"/wd/hub"), dc);
+        driver = new IOSDriver<IOSElement>(new URL("http://192.168.1.60:8080/wd/hub"), dc);
+
     }
 
 
