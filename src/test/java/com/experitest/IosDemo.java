@@ -44,7 +44,7 @@ public class IosDemo {
 
         System.out.println("Cloud: " + cloudAddress);
         System.out.println("deviceQuery: " + deviceQuery);
-
+        System.out.println("accessKey: " + accessKey);
 
         dc.setCapability("reportDirectory", reportDirectory);
         dc.setCapability("reportFormat", reportFormat);
