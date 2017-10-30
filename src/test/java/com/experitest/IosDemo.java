@@ -22,7 +22,7 @@ import java.net.URL;
 
 public class IosDemo {
 
-    static String buildNumber = System.getenv("build.number");
+    static String buildNumber = System.getenv("BUILD_NUMBER");
     static final String accessKey = System.getenv("cloud.accessKey");
     static String cloudAddress = System.getenv("cloud.address");
     static String deviceQuery = System.getenv("device.query.ios");
@@ -42,6 +42,7 @@ public class IosDemo {
     @BeforeTest
     public void setUp(final ITestContext testContext) throws MalformedURLException {
 
+        System.out.println("buildNumber: " + buildNumber);
         System.out.println("Cloud: " + cloudAddress);
         System.out.println("deviceQuery: " + deviceQuery);
         System.out.println("accessKey: " + accessKey);
@@ -70,6 +71,7 @@ public class IosDemo {
 
     @Test
     public void Login1() {
+        System.out.println("Running LoginTest...");
         driver.findElement(By.xpath("//*[@accessibilityLabel='usernameTextField' and @value='Username']")).sendKeys("company");
         driver.findElement(By.xpath("//*[@accessibilityLabel='passwordTextField' and @value='Password']")).sendKeys("compant");
         driver.findElement(By.xpath("//*[@name='loginButton']")).click();
