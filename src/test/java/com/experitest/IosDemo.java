@@ -12,6 +12,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
@@ -40,6 +41,10 @@ public class IosDemo {
 
     @BeforeTest
     public void setUp(final ITestContext testContext) throws MalformedURLException {
+
+        System.out.println("Cloud: " + cloudAddress);
+        System.out.println("deviceQuery: " + deviceQuery);
+
 
         dc.setCapability("reportDirectory", reportDirectory);
         dc.setCapability("reportFormat", reportFormat);

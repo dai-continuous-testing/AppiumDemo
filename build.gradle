@@ -33,6 +33,11 @@ task wrapper(type: Wrapper) {
 }
 
 test{
+
+    testLogging {
+        events "standardOut"
+    }
+
     useTestNG() {
         //set TestNG output dir
         outputDirectory = file("testngOutput")
