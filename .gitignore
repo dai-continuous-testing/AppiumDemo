@@ -6,8 +6,12 @@
 # Log file
 *.log
 
-# BlueJ files
-*.ctxt
+# Reports
+/testngOutput
+
+
+# IDEA
+/.idea
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

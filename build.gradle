@@ -14,13 +14,16 @@ apply plugin: 'application'
 
 repositories {
     maven {
-        url "http://repo.experitest.com:8010/Maven2/"
+        url "https://cloud.experitest.com/repo"
     }
     mavenCentral()
 }
 
 dependencies {
     compile group: 'org.testng', name: 'testng', version: '6.8.8'
+    compile 'io.appium:java-client:4.1.2'
+    compile 'com.experitest:manager-client:+'
+
 }
 
 mainClassName = "com.experitest.SimpleApp"

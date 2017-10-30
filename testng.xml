@@ -3,17 +3,17 @@
 
 <suite name="AppiumDemo" parallel="classes" verbose="1" thread-count="2">
 
-    <test name="SimpleTest1">
+    <test name="Android Run">
         <parameter name="deviceQuery" value="@os='ios'"/>
         <classes>
             <class name="com.experitest.SimpleTest2" />
         </classes>
     </test>
 
-    <test name="SimpleTest2">
+    <test name="iOS Run">
         <parameter name="deviceQuery" value="@os='ios'"/>
         <classes>
-            <class name="com.experitest.SimpleTests" />
+            <class name="com.experitest.IosDemo" />
         </classes>
     </test>
 
