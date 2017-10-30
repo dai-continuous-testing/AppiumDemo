@@ -1,21 +1,12 @@
 package com.experitest;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.ios.IOSElement;
-import io.appium.java_client.remote.IOSMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-
-import java.lang.reflect.Method;
 import java.net.MalformedURLException;
-import java.net.URL;
 
 
 public class TestBase {
@@ -26,7 +17,7 @@ public class TestBase {
     static final String deviceQueryIOS = System.getenv("device.query.ios");
     static final String deviceQueryAndroid = System.getenv("device.query.android");
 
-
+    protected String cloudURI;
     protected String reportDirectory = "reports";
     protected String reportFormat = "xml";
     protected String testName = "Untitled";
@@ -41,6 +32,10 @@ public class TestBase {
         System.out.println("buildNumber: " + buildNumber);
         System.out.println("Cloud: " + cloudAddress);
         System.out.println("accessKey: " + accessKey);
+
+        cloudURI = cloudAddress + "/wd/hub";
+        System.out.println("cloud address: " + cloudURI );
+
 
         dc.setCapability("reportDirectory", reportDirectory);
         dc.setCapability("reportFormat", reportFormat);
