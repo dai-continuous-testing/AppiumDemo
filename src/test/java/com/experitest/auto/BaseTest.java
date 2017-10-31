@@ -41,7 +41,7 @@ public class BaseTest {
 		dc.setCapability("deviceQuery", adhocDevice(deviceQuery));
 		dc.setCapability("reportDirectory", "reports");
 		dc.setCapability("reportFormat", "xml");
-		dc.setCapability("stream", "demo");
+		dc.setCapability("stream", "demo3");
 		String cname = className.split("\\.")[className.split("\\.").length - 1];
 		dc.setCapability("testName", cname + "." + testName);
 		dc.setCapability("build", String.valueOf(getBuild()));
