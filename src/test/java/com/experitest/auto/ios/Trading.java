@@ -1,7 +1,5 @@
 package com.experitest.auto.ios;
 
-import java.net.URL;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -12,8 +10,6 @@ import com.experitest.auto.BaseTest;
 
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
-import io.appium.java_client.remote.IOSMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
 
 public class Trading extends BaseTest {
 	protected IOSDriver<IOSElement> driver = null;
