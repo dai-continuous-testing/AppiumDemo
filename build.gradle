@@ -17,6 +17,9 @@ repositories {
         url "https://cloud.experitest.com/repo"
     }
     mavenCentral()
+    flatDir {
+       dirs 'lib'
+   }
 }
 
 dependencies {

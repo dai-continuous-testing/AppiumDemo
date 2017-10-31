@@ -1,0 +1,303 @@
+<suite name="ios_fast" parallel="tests" thread-count="10">
+	<test name="Payment.basic">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="basic"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.noBalance">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="noBalance"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.unauthorized">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="unauthorized"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.transactionCancel">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="transactionCancel"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.maxAmount">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="maxAmount"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.minimumAmount">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="minimumAmount"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.historyView">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="historyView"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.transferRejection">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="transferRejection"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login.basic">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login">
+				<methods>
+					<include name="basic"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login.failLogin">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login">
+				<methods>
+					<include name="failLogin"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login.withMultipleSession">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login">
+				<methods>
+					<include name="withMultipleSession"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login.retryFail">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login">
+				<methods>
+					<include name="retryFail"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login.blockUser">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login">
+				<methods>
+					<include name="blockUser"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login.sessionTimeout">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login">
+				<methods>
+					<include name="sessionTimeout"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login.stability">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login">
+				<methods>
+					<include name="stability"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login.retypePassword">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login">
+				<methods>
+					<include name="retypePassword"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.buy">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="buy"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.buyWithMax">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="buyWithMax"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.buyWithTimeLimit">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="buyWithTimeLimit"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.buyFail">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="buyFail"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.buyNoBalance">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="buyNoBalance"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.multipleBuy">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="multipleBuy"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.buyCancel">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="buyCancel"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.sale">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="sale"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.saleWithMin">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="saleWithMin"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.saleWithTimeLimit">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="saleWithTimeLimit"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.saleFail">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="saleFail"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.multipleSale">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="multipleSale"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.saleCancel">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="saleCancel"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Trading.buySaleCondition">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Trading">
+				<methods>
+					<include name="buySaleCondition"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>
