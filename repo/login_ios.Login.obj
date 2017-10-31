@@ -1,0 +1,6 @@
+#Mon Oct 23 23:57:33 IDT 2017
+context=INSTRUMENTED
+json={"nodeName"\:"UIButtonLabel","visible"\:"true","hidden"\:"false","textContext"\:"Login","knownSuperClass"\:"UILabel","uniqueKeys"\:"nodeName,textContext,textColor,text,accessibilityLabel,class","dumpElementType"\:"INSTRUMENTED","textColor"\:"0x007AFF","enabled"\:"true","onScreen"\:"true","top"\:"true","alpha"\:"1","x"\:"334","width"\:"80","y"\:"454","text"\:"Login","tag"\:"0","accessibilityLabel"\:"Login","class"\:"UIButtonLabel","height"\:"36"}
+page=login_ios
+by=xpath
+expression=//*[@text\='Login']
