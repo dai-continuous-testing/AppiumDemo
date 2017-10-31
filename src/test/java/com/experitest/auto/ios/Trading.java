@@ -22,9 +22,6 @@ public class Trading extends BaseTest {
 	@Parameters("deviceQuery")
 	public void setUp(@Optional("@os='ios'") String deviceQuery) throws Exception {
 		init(deviceQuery);
-		// Init application / device capabilities
-
-		driver = new IOSDriver<>(new URL(getProperty("url",cloudProperties) + "/wd/hub"), dc);
 	}
 
 	@Test
