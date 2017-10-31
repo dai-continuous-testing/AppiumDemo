@@ -46,14 +46,7 @@ public class BaseTest {
 		dc.setCapability("build", String.valueOf(getBuild()));
 		dc.setCapability(MobileCapabilityType.ORIENTATION, "portrait");
 
-		String accessKey = getProperty("accessKey", cloudProperties);
-		
-		if(accessKey != null && !accessKey.isEmpty()){
-			dc.setCapability("accessKey", getProperty("accessKey", cloudProperties));
-		} else {
-			dc.setCapability("user", getProperty("username", cloudProperties));
-			dc.setCapability("password", getProperty("password", cloudProperties));		}
-		
+		dc.setCapability("accessKey", accessKey);
 		// In case your user is assign to a single project leave empty,
 		// otherwise please specify the project name
 		dc.setCapability("project", getProperty("project", cloudProperties));
