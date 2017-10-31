@@ -24,10 +24,6 @@ public class Payment extends BaseTest {
 		init(deviceQuery);
 		// Init application / device capabilities
 
-		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
-		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
-		dc.setCapability("instrumentApp", true);
-		
 		driver = new IOSDriver<>(new URL(getProperty("url",cloudProperties) + "/wd/hub"), dc);
 	}
 

@@ -24,10 +24,6 @@ public class Login extends BaseTest {
 	public void setUp(@Optional("@os='ios'") String deviceQuery) throws Exception {
 		init(deviceQuery);
 		// Init application / device capabilities
-
-		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
-		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
-		dc.setCapability("instrumentApp", true);
 		
 		driver = new IOSDriver<>(new URL(getProperty("url",cloudProperties) + "/wd/hub"), dc);
 	}

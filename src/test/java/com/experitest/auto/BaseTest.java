@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BaseTest {
@@ -45,6 +46,11 @@ public class BaseTest {
 		dc.setCapability("testName", cname + "." + testName);
 		dc.setCapability("build", String.valueOf(getBuild()));
 		dc.setCapability(MobileCapabilityType.ORIENTATION, "portrait");
+		
+		dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
+		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
+		dc.setCapability("instrumentApp", true);
+
 
 		dc.setCapability("accessKey", accessKey);
 		// In case your user is assign to a single project leave empty,
