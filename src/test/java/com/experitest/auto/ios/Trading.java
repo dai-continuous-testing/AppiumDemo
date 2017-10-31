@@ -12,7 +12,6 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 
 public class Trading extends BaseTest {
-	protected IOSDriver<IOSElement> driver = null;
 
 	@BeforeMethod
 	@Parameters("deviceQuery")
