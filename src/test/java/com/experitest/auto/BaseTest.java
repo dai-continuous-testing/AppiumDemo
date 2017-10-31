@@ -107,6 +107,11 @@ public class BaseTest {
 	}
 	public void shouldFailTest(AppiumDriver<?> driver) {
 		Capabilities c = driver.getCapabilities();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 //		if("11.x".equals(c.getCapability("device.majorVersion"))) {
 //			driver.findElement(By.xpath("//*[@aaa='bbbb'"));
 //		}
