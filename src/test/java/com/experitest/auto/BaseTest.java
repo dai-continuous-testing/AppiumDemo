@@ -41,8 +41,15 @@ public class BaseTest {
 		dc.setCapability("accessKey", accessKey);
 		
 
+		dc.setCapability("stream", "demo4");
+		
+		dc.setCapability("reportDirectory", "reports");
+		dc.setCapability("reportFormat", "xml");
+		dc.setCapability("project", getProperty("project", cloudProperties));
+
+		
 		dc.setCapability("instrumentApp", true);
-		driver = new IOSDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), dc);
+		driver = new IOSDriver<>(new URL("https://stage.experitest.com/wd/hub"), dc);
 
 
 	}
