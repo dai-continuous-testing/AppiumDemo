@@ -1,6 +1,6 @@
-#Thu Oct 19 09:32:42 IDT 2017
-context=INSTRUMENTED
+#Wed Nov 01 16:00:04 IST 2017
 json={"nodeName"\:"UITextField","accessibilityIdentifier"\:"usernameTextField","visible"\:"true","hidden"\:"false","textContext"\:"","knownSuperClass"\:"UITextField","uniqueKeys"\:"accessibilityIdentifier,placeholder,accessibilityLabel","dumpElementType"\:"INSTRUMENTED","textColor"\:"0x000000","enabled"\:"true","onScreen"\:"true","top"\:"true","alpha"\:"1","x"\:"40","width"\:"670","y"\:"262","text"\:"","placeholder"\:"Username","tag"\:"0","accessibilityLabel"\:"usernameTextField","class"\:"UITextField","height"\:"62"}
+context=INSTRUMENTED
 page=login_ios
 by=xpath
 expression=//*[@accessibilityIdentifier\='usernameTextField']

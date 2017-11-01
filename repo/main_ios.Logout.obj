@@ -1,6 +1,6 @@
-#Thu Oct 19 11:16:09 IDT 2017
-json={"nodeName"\:"UIButtonLabel","visible"\:"true","hidden"\:"false","textContext"\:"Logout","knownSuperClass"\:"UILabel","uniqueKeys"\:"textContext,text,accessibilityLabel","dumpElementType"\:"INSTRUMENTED","textColor"\:"0x385487","enabled"\:"true","onScreen"\:"true","top"\:"true","alpha"\:"1","x"\:"324","width"\:"102","y"\:"868","text"\:"Logout","tag"\:"0","accessibilityLabel"\:"Logout","class"\:"UIButtonLabel","height"\:"36"}
+#Wed Nov 01 16:02:11 IST 2017
 context=INSTRUMENTED
+json={"nodeName"\:"UIButtonLabel","visible"\:"true","hidden"\:"false","textContext"\:"Logout","knownSuperClass"\:"UILabel","uniqueKeys"\:"textContext,text,accessibilityLabel","dumpElementType"\:"INSTRUMENTED","textColor"\:"0x385487","enabled"\:"true","onScreen"\:"true","top"\:"true","alpha"\:"1","x"\:"324","width"\:"102","y"\:"868","text"\:"Logout","tag"\:"0","accessibilityLabel"\:"Logout","class"\:"UIButtonLabel","height"\:"36"}
 page=main_ios
 by=xpath
-expression=//*[@text\='Logout']
+expression=//*[@text\='logoutButton']

@@ -48,7 +48,7 @@ public class BaseTest {
 		dc.setCapability("project", getProperty("project", cloudProperties));
 
 		
-		dc.setCapability("instrumentApp", true);
+		//dc.setCapability("instrumentApp", true);
 		driver = new IOSDriver<>(new URL("https://stage.experitest.com/wd/hub"), dc);
 
 
