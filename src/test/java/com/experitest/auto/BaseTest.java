@@ -36,7 +36,7 @@ public class BaseTest {
 		dc.setCapability("build", String.valueOf(getBuild()));
 		dc.setCapability(MobileCapabilityType.ORIENTATION, "portrait");
 		
-		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
+		dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
 		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
 		dc.setCapability("accessKey", accessKey);
 		
@@ -50,7 +50,7 @@ public class BaseTest {
 		
 		//dc.setCapability("instrumentApp", true);
 		driver = new IOSDriver<>(new URL("https://stage.experitest.com/wd/hub"), dc);
-		driver.context("NATIVE_APP");
+
 
 	}
 
