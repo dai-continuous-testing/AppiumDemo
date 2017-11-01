@@ -20,9 +20,9 @@ import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BaseTest {
-	public static String buildId = System.getenv("BUILD_NUMBER");
-	public static String accessKey = System.getenv("access.key");
-	public static String deviceQuery = System.getenv("device.query");
+	public static String buildId = "-1";
+	public static String accessKey = null;
+	public static String deviceQuery = "@os='ios'";
 	
 	protected IOSDriver<IOSElement> driver = null;
 
@@ -36,7 +36,7 @@ public class BaseTest {
 		dc.setCapability("build", String.valueOf(getBuild()));
 		dc.setCapability(MobileCapabilityType.ORIENTATION, "portrait");
 		
-		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
+		dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
 		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
 		dc.setCapability("accessKey", accessKey);
 		
@@ -47,7 +47,7 @@ public class BaseTest {
 		dc.setCapability("project", getProperty("project", cloudProperties));
 
 		dc.setCapability("instrumentApp", true);
-		driver = new IOSDriver<>(new URL(getProperty("url", cloudProperties) + "/wd/hub"), dc);
+		driver = new IOSDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), dc);
 
 
 	}
