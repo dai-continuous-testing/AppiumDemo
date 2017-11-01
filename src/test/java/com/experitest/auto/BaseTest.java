@@ -20,9 +20,9 @@ import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BaseTest {
-	public static String buildId = "-1";
-	public static String accessKey = null;
-	public static String deviceQuery = "@os='ios'";
+	public static String buildId = System.getenv("BUILD_NUMBER");
+	public static String accessKey = System.getenv("access.key");
+	public static String deviceQuery = System.getenv("device.query");
 	
 	protected IOSDriver<IOSElement> driver = null;
 
