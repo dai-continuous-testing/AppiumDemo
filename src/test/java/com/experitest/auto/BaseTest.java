@@ -39,7 +39,7 @@ public class BaseTest {
 		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
 		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
 		dc.setCapability("accessKey", accessKey);
-		
+		dc.setCapability("autoAcceptAlerts", true);
 
 		dc.setCapability("stream", "demo4");
 		

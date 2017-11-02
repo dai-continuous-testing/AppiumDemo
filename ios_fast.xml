@@ -1,4 +1,4 @@
-<suite name="ios_fast" parallel="tests" thread-count="20">
+<suite name="ios_fast" parallel="tests" thread-count="15">
 	<test name="Payment.basic">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
