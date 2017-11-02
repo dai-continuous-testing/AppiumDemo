@@ -299,5 +299,85 @@
 			</class>
 		</classes>
 	</test>
+	<test name="Login2.basic">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login2">
+				<methods>
+					<include name="basic"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login2.failLogin">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login2">
+				<methods>
+					<include name="failLogin"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login2.withMultipleSession">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login2">
+				<methods>
+					<include name="withMultipleSession"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login2.retryFail">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login2">
+				<methods>
+					<include name="retryFail"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login2.blockUser">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login2">
+				<methods>
+					<include name="blockUser"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login2.sessionTimeout">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login2">
+				<methods>
+					<include name="sessionTimeout"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login2.stability">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login2">
+				<methods>
+					<include name="stability"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Login2.retypePassword">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Login2">
+				<methods>
+					<include name="retypePassword"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
 
 </suite>
