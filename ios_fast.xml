@@ -1,5 +1,7 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
 <suite name="ios_fast" parallel="tests" thread-count="15">
-	<test name="Payment.basic">
+	<test name="Payment.basic" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Payment">
@@ -9,7 +11,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Payment.noBalance">
+	<test name="Payment.noBalance" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Payment">
@@ -19,7 +21,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Payment.unauthorized">
+	<test name="Payment.unauthorized" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Payment">
@@ -29,7 +31,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Payment.transactionCancel">
+	<test name="Payment.transactionCancel" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Payment">
@@ -39,7 +41,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Payment.maxAmount">
+	<test name="Payment.maxAmount" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Payment">
@@ -49,7 +51,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Payment.minimumAmount">
+	<test name="Payment.minimumAmount" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Payment">
@@ -59,7 +61,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Payment.historyView">
+	<test name="Payment.historyView" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Payment">
@@ -69,7 +71,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Payment.transferRejection">
+	<test name="Payment.transferRejection" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Payment">
@@ -79,7 +81,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login.basic">
+	<test name="Login.basic" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login">
@@ -89,7 +91,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login.failLogin">
+	<test name="Login.failLogin" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login">
@@ -99,7 +101,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login.withMultipleSession">
+	<test name="Login.withMultipleSession" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login">
@@ -109,7 +111,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login.retryFail">
+	<test name="Login.retryFail" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login">
@@ -119,7 +121,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login.blockUser">
+	<test name="Login.blockUser" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login">
@@ -129,7 +131,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login.sessionTimeout">
+	<test name="Login.sessionTimeout" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login">
@@ -139,7 +141,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login.stability">
+	<test name="Login.stability" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login">
@@ -149,7 +151,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login.retypePassword">
+	<test name="Login.retypePassword" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login">
@@ -159,7 +161,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.buy">
+	<test name="Trading.buy" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -169,7 +171,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.buyWithMax">
+	<test name="Trading.buyWithMax" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -179,7 +181,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.buyWithTimeLimit">
+	<test name="Trading.buyWithTimeLimit" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -189,7 +191,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.buyFail">
+	<test name="Trading.buyFail" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -199,7 +201,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.buyNoBalance">
+	<test name="Trading.buyNoBalance" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -209,7 +211,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.multipleBuy">
+	<test name="Trading.multipleBuy" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -219,7 +221,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.buyCancel">
+	<test name="Trading.buyCancel" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -229,7 +231,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.sale">
+	<test name="Trading.sale" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -239,7 +241,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.saleWithMin">
+	<test name="Trading.saleWithMin" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -249,7 +251,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.saleWithTimeLimit">
+	<test name="Trading.saleWithTimeLimit" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -259,7 +261,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.saleFail">
+	<test name="Trading.saleFail" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -269,7 +271,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.multipleSale">
+	<test name="Trading.multipleSale" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -279,7 +281,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.saleCancel">
+	<test name="Trading.saleCancel" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -289,7 +291,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Trading.buySaleCondition">
+	<test name="Trading.buySaleCondition" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Trading">
@@ -299,7 +301,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login2.basic">
+	<test name="Login2.basic" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login2">
@@ -309,7 +311,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login2.failLogin">
+	<test name="Login2.failLogin" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login2">
@@ -319,7 +321,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login2.withMultipleSession">
+	<test name="Login2.withMultipleSession" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login2">
@@ -329,7 +331,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login2.retryFail">
+	<test name="Login2.retryFail" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login2">
@@ -339,7 +341,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login2.blockUser">
+	<test name="Login2.blockUser" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login2">
@@ -349,7 +351,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login2.sessionTimeout">
+	<test name="Login2.sessionTimeout" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login2">
@@ -359,7 +361,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login2.stability">
+	<test name="Login2.stability" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login2">
@@ -369,7 +371,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Login2.retypePassword">
+	<test name="Login2.retypePassword" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>
 			<class name="com.experitest.auto.ios.Login2">
