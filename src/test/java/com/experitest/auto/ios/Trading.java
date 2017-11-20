@@ -22,118 +22,76 @@ public class Trading extends BaseTest {
 	@Test
 	public void buy() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void buyWithMax() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void buyWithTimeLimit() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void buyFail() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void buyNoBalance() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void multipleBuy() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 
 	@Test
 	public void buyCancel() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 
 
 	@Test
 	public void sale() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void saleWithMin() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void saleWithTimeLimit() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void saleFail() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void multipleSale() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 
 	@Test
 	public void saleCancel() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void buySaleCondition() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	
 	@AfterMethod

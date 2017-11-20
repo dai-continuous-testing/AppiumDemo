@@ -20,68 +20,44 @@ public class Login extends BaseTest {
 	@Test
 	public void basic() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void failLogin() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void withMultipleSession() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void retryFail() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void blockUser() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 	@Test
 	public void sessionTimeout() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 
 	@Test
 	public void retypePassword() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 
 	@Test
 	public void stability() {
 		shouldFailTest(driver);
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
-		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
+		testLogic(driver);
 	}
 
 	
