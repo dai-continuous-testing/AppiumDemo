@@ -125,14 +125,14 @@ public class BaseTest {
 //		}
 	}
 	public void testLogic(AppiumDriver<?> driver) {
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
-//		try {
-//			Thread.sleep(1000);
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		driver.getKeyboard().sendKeys("company");
+		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).click();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.getKeyboard().sendKeys("company");
 		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
 		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
 		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
