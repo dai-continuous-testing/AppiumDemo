@@ -134,7 +134,11 @@ public class BaseTest {
 		}
 		for(int i = 0; i < "company".length(); i++) {
 			String c = "company".substring(i, i + 1);
-			driver.getKeyboard().sendKeys(c);
+			try {
+				driver.getKeyboard().sendKeys(c);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
