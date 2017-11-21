@@ -37,7 +37,7 @@ public class BaseTest {
 		dc.setCapability(MobileCapabilityType.ORIENTATION, "portrait");
 		
 		dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
-		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
+		//dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
 		dc.setCapability("accessKey", accessKey);
 		dc.setCapability("autoAcceptAlerts", true);
 
@@ -50,6 +50,8 @@ public class BaseTest {
 		
 		dc.setCapability("instrumentApp", true);
 		driver = new IOSDriver<>(new URL("https://stage.experitest.com/wd/hub"), dc);
+		Thread.sleep(2000);
+		driver.executeScript("client:client.launch(\"com.experitest.ExperiBank\", true, true);");
 
 
 	}
@@ -132,20 +134,7 @@ public class BaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		for(int i = 0; i < "company".length(); i++) {
-			String c = "company".substring(i, i + 1);
-			try {
-				driver.getKeyboard().sendKeys(c);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+		driver.getKeyboard().sendKeys("company");
 		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
 		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
 		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
