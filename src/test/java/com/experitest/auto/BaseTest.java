@@ -132,7 +132,16 @@ public class BaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.getKeyboard().sendKeys("company");
+		for(int i = 0; i < "company".length(); i++) {
+			String c = "company".substring(i, i + 1);
+			driver.getKeyboard().sendKeys(c);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
 		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
 		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
