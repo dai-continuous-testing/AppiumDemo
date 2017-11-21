@@ -36,7 +36,7 @@ public class BaseTest {
 		dc.setCapability("build", String.valueOf(getBuild()));
 		dc.setCapability(MobileCapabilityType.ORIENTATION, "portrait");
 		
-		dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
+		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
 		//dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
 		dc.setCapability("accessKey", accessKey);
 		dc.setCapability("autoAcceptAlerts", true);
@@ -51,6 +51,7 @@ public class BaseTest {
 		dc.setCapability("instrumentApp", true);
 		driver = new IOSDriver<>(new URL("https://stage.experitest.com/wd/hub"), dc);
 		Thread.sleep(2000);
+		driver.executeScript("client:client.install(\"cloud:com.experitest.ExperiBank\", true, false);");
 		driver.executeScript("client:client.launch(\"com.experitest.ExperiBank\", true, true);");
 
 
