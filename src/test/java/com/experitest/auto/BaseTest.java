@@ -23,6 +23,7 @@ public class BaseTest {
 	public static String buildId = System.getenv("BUILD_NUMBER");
 	public static String accessKey = System.getenv("access.key");
 	public static String deviceQuery = System.getenv("device.query");
+	public static String cloudUrl = System.getenv("cloud.url");
 	
 	protected IOSDriver<IOSElement> driver = null;
 
@@ -36,12 +37,12 @@ public class BaseTest {
 		dc.setCapability("build", String.valueOf(getBuild()));
 		dc.setCapability(MobileCapabilityType.ORIENTATION, "portrait");
 		
-		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
-		//dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
+		dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
+		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
 		dc.setCapability("accessKey", accessKey);
 		dc.setCapability("autoAcceptAlerts", true);
 
-		dc.setCapability("stream", "demo4");
+		dc.setCapability("stream", "GridDemo");
 		
 		dc.setCapability("reportDirectory", "reports");
 		dc.setCapability("reportFormat", "xml");
@@ -49,10 +50,11 @@ public class BaseTest {
 
 		
 		dc.setCapability("instrumentApp", true);
-		driver = new IOSDriver<>(new URL("https://stage.experitest.com/wd/hub"), dc);
-		Thread.sleep(2000);
-		driver.executeScript("client:client.install(\"cloud:com.experitest.ExperiBank\", true, false);");
-		driver.executeScript("client:client.launch(\"com.experitest.ExperiBank\", true, true);");
+		if(cloudUrl == null) {
+			cloudUrl = "https://sales.experitest.com";
+		}
+		
+		driver = new IOSDriver<>(new URL(cloudUrl + "/wd/hub"), dc);
 
 
 	}
@@ -128,15 +130,8 @@ public class BaseTest {
 //		}
 	}
 	public void testLogic(AppiumDriver<?> driver) {
+		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).sendKeys("company");
 		driver.findElement(in.Repo.obj("login_ios.passwordTextField")).sendKeys("company");
-		driver.findElement(in.Repo.obj("login_ios.usernameTextField")).click();
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		driver.getKeyboard().sendKeys("company");
 		driver.findElement(in.Repo.obj("login_ios.loginButton")).click();
 		driver.findElement(in.Repo.obj("main_ios.Logout")).click();
 
