@@ -47,6 +47,6 @@ test{
         outputDirectory = file("testngOutput")
         reports.html.enabled = false
         useDefaultListeners = true
-        suites 'ios_fast.xml'
+        suites 'ios_short.xml'
     }
 }

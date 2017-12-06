@@ -1,0 +1,85 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ios_fast" parallel="tests" thread-count="5">
+	<test name="Payment.basic" time-out="480000">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="basic"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.noBalance" time-out="480000">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="noBalance"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.unauthorized" time-out="480000">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="unauthorized"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.transactionCancel" time-out="480000">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="transactionCancel"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.maxAmount" time-out="480000">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="maxAmount"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.minimumAmount" time-out="480000">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="minimumAmount"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.historyView" time-out="480000">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="historyView"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Payment.transferRejection" time-out="480000">
+		<parameter name="deviceQuery" value="@os='ios'"/>
+		<classes>
+			<class name="com.experitest.auto.ios.Payment">
+				<methods>
+					<include name="transferRejection"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>
