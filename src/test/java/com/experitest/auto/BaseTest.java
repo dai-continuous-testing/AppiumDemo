@@ -27,6 +27,7 @@ public class BaseTest {
 	
 	protected IOSDriver<IOSElement> driver = null;
 	public static boolean installApp = false;
+	
 
 	protected DesiredCapabilities dc = new DesiredCapabilities();
 	public void init(String deviceQuery) throws Exception {
