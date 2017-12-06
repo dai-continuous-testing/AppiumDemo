@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="ios_fast" parallel="tests" thread-count="5">
+<suite name="ios_shorts" parallel="tests" thread-count="5">
 	<test name="Payment.basic" time-out="480000">
 		<parameter name="deviceQuery" value="@os='ios'"/>
 		<classes>

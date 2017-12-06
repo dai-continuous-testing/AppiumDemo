@@ -23,9 +23,10 @@ public class BaseTest {
 	public static String buildId = System.getenv("BUILD_NUMBER");
 	public static String accessKey = System.getenv("access.key");
 	public static String deviceQuery = System.getenv("device.query");
-	public static String cloudUrl = System.getenv("cloud.url");
+	public static String url = System.getenv("url");
 	
 	protected IOSDriver<IOSElement> driver = null;
+	public static boolean installApp = false;
 
 	protected DesiredCapabilities dc = new DesiredCapabilities();
 	public void init(String deviceQuery) throws Exception {
@@ -36,13 +37,14 @@ public class BaseTest {
 		dc.setCapability("testName", cname + "." + testName);
 		dc.setCapability("build", String.valueOf(getBuild()));
 		dc.setCapability(MobileCapabilityType.ORIENTATION, "portrait");
-		
-		dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
+		if(installApp) {
+			dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
+		}
 		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
 		dc.setCapability("accessKey", accessKey);
 		dc.setCapability("autoAcceptAlerts", true);
 
-		dc.setCapability("stream", "GridDemo");
+		dc.setCapability("stream", "GridDemo2");
 		
 		dc.setCapability("reportDirectory", "reports");
 		dc.setCapability("reportFormat", "xml");
@@ -50,11 +52,8 @@ public class BaseTest {
 
 		
 		dc.setCapability("instrumentApp", true);
-		if(cloudUrl == null) {
-			cloudUrl = "https://sales.experitest.com";
-		}
 		
-		driver = new IOSDriver<>(new URL(cloudUrl + "/wd/hub"), dc);
+		driver = new IOSDriver<>(new URL(url + "/wd/hub"), dc);
 
 
 	}
