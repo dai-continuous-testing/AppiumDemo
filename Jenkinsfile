@@ -15,7 +15,7 @@ pipeline {
         }
       }
     }
-    stage('Deploy Server (QA)') {
+    stage('Deploy to QA') {
       parallel {
         stage('Deploy Server (QA)') {
           steps {
@@ -29,9 +29,9 @@ pipeline {
         }
       }
     }
-    stage('Run API Tests') {
+    stage('Run Tests') {
       parallel {
-        stage('Run API Tests') {
+        stage('Run Postman Tests') {
           steps {
             sleep 10
           }
